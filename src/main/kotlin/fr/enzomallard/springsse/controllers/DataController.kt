@@ -12,7 +12,7 @@ import java.security.Principal
 
 @RestController
 @RequestMapping("/api/data/")
-class Web(
+class DataController(
     private val dataManagerService: DataManagerService
 ) {
     @PostMapping("{id}/start")

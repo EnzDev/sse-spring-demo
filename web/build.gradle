@@ -1,0 +1,14 @@
+plugins {
+  id "com.github.node-gradle.node" version "7.0.2"
+}
+version '0.0.1'
+node {
+  version = '20.11.1'
+  npmVersion = '10.2.4'
+}
+
+tasks.register('buildAngularApp', NpxTask) {
+  dependsOn npmInstall
+  command = 'ng'
+  args = ['build']
+}

@@ -38,3 +38,6 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+### Static Angular output ###
+/src/main/resources/static/

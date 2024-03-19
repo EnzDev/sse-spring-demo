@@ -28,6 +28,8 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 }
 
+processResources.dependsOn('web:buildAngularApp')
+
 tasks.withType(KotlinCompile) {
     kotlinOptions {
         freeCompilerArgs += '-Xjsr305=strict -parameters'
