@@ -1,0 +1,16 @@
+<!-- Select user -->
+<select [formControl]="userControl" (change)="setUser()">
+  @for(user of users; track user){
+    <option [value]="user">{{user}}</option>
+  }
+</select>
+
+<div>
+<input [formControl]="dataControl" type="text" placeholder="Start to retrieve" />
+<button (click)="retrieveData()">Start and retrieve</button>
+<button (click)="stopEarly()">Stop early</button>
+</div>
+
+@for (data of results$ | async; track data.uuid){
+  <div>{{data | json}}</div>
+}
