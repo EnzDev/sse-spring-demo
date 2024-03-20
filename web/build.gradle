@@ -5,6 +5,12 @@ version '0.0.1'
 node {
   version = '20.11.1'
   npmVersion = '10.2.4'
+
+  // Download Node through http
+  download = true
+  allowInsecureProtocol = true
+  // noinspection HttpUrlsUsage
+  distBaseUrl = 'http://nodejs.org/dist'
 }
 
 tasks.register('buildAngularApp', NpxTask) {
